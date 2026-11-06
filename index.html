@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make Force Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <script src="network.js"></script>
+
+</head>
+<body>
+    <div id="controls">
+    <label>
+        Charge:
+        <input id="charge" type="range"
+               min="-300" max="0" step="5" value="-60">
+        <output id="charge-value">-60</output>
+    </label>
+
+    <label>
+        Collision radius factor:
+        <input id="collision" type="range"
+               min="1" max="3" step="0.1" value="1.3">
+        <output id="collision-value">1.3</output>
+    </label>
+
+    <label>
+        Link strength:
+        <input id="link-strength" type="range"
+               min="0" max="1" step="0.05" value="0.2">
+        <output id="link-strength-value">0.2</output>
+    </label>
+</div>
+
+<div id="legend"></div>
+
+<div id="tooltip" hidden></div>
+<script>
+    d3.json("authors_network.json").then(function (data){
+        let svg = d3.select('body').append("svg").attr("viewBox","0 0 1000 800")
+        console.log(data)
+        simulate(data,svg) // main function to make network
+    })
+
+
+
+</script>
+
+</body>
+</html>

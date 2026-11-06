@@ -1,0 +1,26 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "name": "Hoskins, J.A.",
+      "affiliation": "Univ of Manitoba, Winnipeg",
+      "country": "Canada",
+      "id": "7103063469"
+    },
+    {
+      "name": "Hoskins, W.D.",
+      "affiliation": "Univ of Manitoba, Winnipeg",
+      "country": "Canada",
+      "id": "7103384676"
+    }
+  ],
+  "links": [
+    {
+      "value": 1,
+      "source": "7103063469",
+      "target": "7103384676"
+    }
+  ]
+}
